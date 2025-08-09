@@ -14,10 +14,10 @@ A simple script to install Artix Linux with the runit init system.
 
 1. Clone this repo:  
    `git clone https://github.com/xeyossr/artix-runit-install.git`  
-2. Run the choices script to pick your options:  
-   `./choices.sh`  
-3. Then run the installer:  
-   `./install.sh`  
+2. Go into the folder:  
+   `cd artix-runit-install`  
+3. Run the choices script to select your options:  
+   `./choices.sh`
 
 ---
 
