@@ -235,7 +235,7 @@ fi
 # ---------------------------
 # 9. Install base system
 # ---------------------------
-packages=(base base-devel runit elogind-runit "${kernel_choice}" linux-firmware "${cpu_choice}-ucode" nano)
+packages=(base base-devel "${init_system}" "elogind-${init_system}" "${kernel_choice}" linux-firmware "${cpu_choice}-ucode" nano)
 if [ "${is_btrfs:-false}" == "true" ]; then
     packages+=(btrfs-progs)
 fi
@@ -292,7 +292,7 @@ run_in_chroot "bash -c 'printf \"root:%s\n\" \"$rootpass\" | chpasswd'"
 # ---------------------------
 # 15. Install core packages & GRUB
 # ---------------------------
-run_in_chroot "pacman -S --noconfirm grub efibootmgr networkmanager networkmanager-runit network-manager-applet dosfstools ${kernel_choice}-headers bluez bluez-utils bluez-runit xdg-utils xdg-user-dirs"
+run_in_chroot "pacman -S --noconfirm grub efibootmgr networkmanager networkmanager-${init_system} network-manager-applet dosfstools ${kernel_choice}-headers bluez bluez-utils bluez-${init_system} xdg-utils xdg-user-dirs"
 run_in_chroot "grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB"
 run_in_chroot "grub-mkconfig -o /boot/grub/grub.cfg"
 

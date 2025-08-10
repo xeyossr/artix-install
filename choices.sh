@@ -93,11 +93,14 @@ elif [[ "$gpu_choice" == "amd" ]]; then
     echo "AMD GPU selected, the driver will be installed automatically."
 fi
 
-# 8. Yay installation option
+# 8. Init system choice
+init_system=$(ask_option "Which init system would you like to install?" "openrc" "runit openrc s6 dinit")
+
+# 9. Yay installation option
 yay_choice=$(ask_yes_no "Do you want to install Yay?" "Y")
 
-# 9. Extra packages (separate with spaces)
-read -p "Enter any extra packages (e.g., sddm sddm-runit plasma fastfetch): " extra_packages
+# 10. Extra packages (separate with spaces)
+read -p "Enter any extra packages (e.g., sddm plasma fastfetch): " extra_packages
 
 # Now we will save these details to a file
 cat > install_info.sh <<EOF
@@ -110,6 +113,7 @@ kernel_choice="$kernel_choice"
 cpu_choice="$cpu_choice"
 gpu_choice="$gpu_choice"
 nvidia_driver_choice="$nvidia_driver_choice"
+init_system="$init_system"
 yay_choice="$yay_choice"
 extra_packages="$extra_packages"
 EOF
