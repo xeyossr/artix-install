@@ -1,6 +1,6 @@
-# artix-runit-install
+# artix-install
 
-A simple script to install Artix Linux with the runit init system.
+A simple script to install Artix Linux.
 
 ---
 
@@ -13,9 +13,9 @@ A simple script to install Artix Linux with the runit init system.
 ## How to use
 
 1. Clone this repo:  
-   `git clone https://github.com/xeyossr/artix-runit-install.git`  
+   `git clone https://github.com/xeyossr/artix-install.git`  
 2. Go into the folder:  
-   `cd artix-runit-install`  
+   `cd artix-install`  
 3. Run the choices script to select your options:  
    `./choices.sh`
 
@@ -28,4 +28,4 @@ This project is licensed under **GPLv3** — you’re free to use, modify, and s
 ---
 
 ## Forks
-Feel free to fork and change it for your system or to support other init systems.
+Feel free to fork and change it for your system.
