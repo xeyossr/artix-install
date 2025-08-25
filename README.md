@@ -13,7 +13,7 @@ A simple script to install Artix Linux.
 ## How to use
 
 1. Clone this repo:  
-   `git clone https://github.com/xeyossr/artix-install.git`  
+   `git clone https://github.com/axrona/artix-install.git`  
 2. Go into the folder:  
    `cd artix-install`  
 3. Run the choices script to select your options:  
